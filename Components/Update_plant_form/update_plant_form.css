@@ -1,0 +1,17 @@
+* {
+	margin: 2px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	width: 30vw;
+	height: 25vh;
+	background-color: green;
+}

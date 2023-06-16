@@ -1,10 +1,22 @@
 <?php
-	$id = $_GET["id"];
+// tudo isso dentro de uma função
+/*	$id = $_GET["id"];
 	
 	$sql = "DELETE FROM
 				plant
 	        WHERE id='{$id}'";
 			
 	mysqli_query($connection,$sql) or die("Opa! Houve algum erro. \n" . mysqli_error(connection));
-	header('Location:index.php');
+	header('Location:../index.php'); // Talvez o que está causando o erro é que o header está sendo alterado duas vezes seguidas, no index, e aqui.*/
+	
+		include('../connection.php');
+		
+		$id = $_POST['id'];
+		
+		$sql = "DELETE FROM
+				plant
+	        WHERE id='{$id}'";
+			
+		mysqli_query($connection,$sql) or die("Opa! Houve algum erro. \n" . mysqli_error(connection));
+		//header('Location:../index.php');
 ?>

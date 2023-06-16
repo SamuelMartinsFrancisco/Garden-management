@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+}
+
+.title {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	font-weight: 800;
+}
+
+
+/*///////// Formulário de adição de novas plantas //////////*/
+.add_plant_form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 27vw;
+	min-width: 24em;
+	height: 100%;
+	background-color: #90BE6D;
+}
+.add_plant_form form {
+	width: 80%;
+}
+
+.add_plant_form div {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+	font-size: 18px;
+	width: 100%;
+	gap: 5px;
+}
+
+.add_plant_form input, .add_plant_form button {
+	height: 35px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	padding: 0px 13px 0px 13px;
+}
+
+.add_plant_form .name input {
+	width: 60%;
+	margin-left: 10px;
+}
+
+.add_plant_form .date input {
+	width: 30%;
+	min-width: 130px;
+	margin-left: 10px;
+}
+
+.add_plant_form .status {
+	margin-bottom: 20px;
+}
+
+.add_plant_form .status input {
+	z-index: 1000;
+	width: 35px;
+	min-width: 35px;
+	position: relative;
+	left: 12px;
+	top: -2px;
+	opacity: 0;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.add_plant_form .status .options input:hover + .radio_button {
+	border-color: gray;
+}
+
+.add_plant_form .status .options input:checked + .radio_button {
+	border-color: #000;
+	opacity: 1;
+	transition: 0.15s;
+}
+
+.add_plant_form .status  .options {
+	display: flex;
+	flex-direction: row;
+}
+
+.status .options .radio_button {
+	display: block;
+	width: 30px;
+	min-width: 30px;
+	height: 30px;
+	min-height: 30px;
+	border: 3px solid #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	position: absolute;
+	opacity: 0.9;
+	transition: 0.15s;
+}
+/* #43AA8B, #F9C74F, #F9844A, #F94144 */
+
+
+.status .options .radio_button:nth-child(2) {
+	background-color: #43AA8B;
+	margin-left: 15px;
+}
+
+.status .options .radio_button:nth-child(4) {
+	background-color: #F9C74F;
+	margin-left: 65px;
+}
+
+.status .options .radio_button:nth-child(6) {
+	background-color: #F9844A;
+	margin-left: 115px;
+}
+
+.status .options .radio_button:nth-child(8) {
+	background-color: #F94144;
+	margin-left: 165px;
+}
+
+.add_plant_form .notes textarea {
+	height: 100px;
+	width: 50%;
+	min-width: 190px;
+	padding: 5px 13px 5px 13px;
+	border: none; 
+	outline: none;
+	border-radius: 10px;
+	resize: none;
+	margin-left: 10px;
+}
+
+.add_plant_form .form_operations {
+	flex-direction: row;
+}
+
+.form_operations button {
+	background-color: #376664;
+	color:#FFFFFF;
+	border-radius: 10px;
+}
+
+.form_operations button:hover {
+	background-color: #3C706E;
+}
+
+.form_operations button:active {
+	background-color: #6BAFAD;
+}
+
+/*////////////////////////////////////////////*/
+ 
+
+/*/////////////// Lista das plantas do jardim //////////////////*/
+main {
+	display: flex;
+	height: 100%;
+	width: 70vw;
+	justify-content: center;
+	align-items: center;
+}
+
+.garden_plants_list {
+	border-collapse: collapse;
+	text-align: center;
+	border: none;
+}
+
+.garden_plants_list th {
+	min-width: 150px;
+	background-color: #CEB479;
+	padding: 10px;
+}
+
+.garden_plants_list tr:nth-child(2n) td:nth-child(-n + 2), .garden_plants_list tr:nth-child(2n) td:last-child  {
+	background-color: rgba(87,117,144,0.13);
+}
+
+.garden_plants_list th, td {
+	min-width: 150px;
+	border: 1px solid;
+}
+
+.garden_plants_list td:nth-child(3){
+	opacity: 0.7;
+}
+
+.garden_plants_list td:nth-child(4) {
+	border: none;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	margin-left: 15px;
+	min-width: 110px;
+}
+
+.garden_plants_list button {
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	width: 50px;
+	height: 50px;
+	background: none;
+}
+
+.garden_plants_list svg {
+	width: 35px;
+}
+
+.garden_plants_list .remove_button path {
+	fill: #F94144;
+}
+
+.remove_button:hover, .edit_button:hover {
+	opacity: 0.6;
+}
+/*//////////////////////////////////////////////////*/
